@@ -1,36 +1,29 @@
-import React,{useState} from 'react'
-import RecipeList from './components/RecipeList.jsx'
-import AddRecipeForm from './components/AddRecipeForm.jsx'
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import RecipeList from "./components/RecipeList.jsx";
+import AddRecipeForm from "./components/AddRecipeForm.jsx";
+import RecipeDetails from "./components/RecipeDetails.jsx";
+
+
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <AddRecipeForm/>
-      <RecipeList/>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      
+      <AddRecipeForm />
+      <RecipeList />
+      <Router>
+      <Routes>
+        <Route path="/" element={<RecipeList />} />
+        <Route path="/add" element={<AddRecipeForm />} />
+        <Route path="/recipes/:id" element={<RecipeDetails />} />
+      </Routes>
+    </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
