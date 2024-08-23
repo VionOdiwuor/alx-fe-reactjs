@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import RecipeList from './components/RecipeList.jsx'
-import AddRecipeForm from '../components/AddRecipeForm.jsx'
+import AddRecipeForm from './components/AddRecipeForm.jsx'
 
 
 function App() {
