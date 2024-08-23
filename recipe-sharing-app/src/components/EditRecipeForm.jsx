@@ -18,7 +18,7 @@ const EditRecipeForm = ({ recipeId }) => {
   }, [recipe]);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    event.preventDefault();
     if (title && description) {
       updateRecipe(recipeId, { title, description });
       navigate(`/recipes/${recipeId}`); // Redirect to recipe details page
