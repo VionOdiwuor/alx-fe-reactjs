@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import { useRecipeStore } from './recipeStore.js';
 
 const RecipeList = () => {
@@ -37,7 +38,12 @@ useEffect(() => {
       {filteredRecipes.length > 0 ? (
         filteredRecipes.map(recipe => (
           <li key={recipe.id} className="flex items-center mb-2 p-2 rounded-md bg-gray-100">
-            <h3 className="text-lg font-semibold">{recipe.title}</h3>
+            <Link
+                to={`/recipes/${recipe.id}`} // Define the route to the recipe details page
+                className="text-lg font-semibold text-blue-600 hover:underline"
+              >
+                {recipe.title}
+              </Link>
             <p className="ml-4">{recipe.description}</p>
           </li>
            ))
