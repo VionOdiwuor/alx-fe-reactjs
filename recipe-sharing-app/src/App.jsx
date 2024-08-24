@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import RecipeList from "./components/RecipeList.jsx";
 import AddRecipeForm from "./components/AddRecipeForm.jsx";
 import RecipeDetails from "./components/RecipeDetails.jsx";
+import FavoritesList from './components/FavoritesList';
+import RecommendationsList from './components/RecommendationsList';
 
 
 
@@ -20,6 +22,8 @@ function App() {
         <Route path="/" element={<RecipeList />} />
         <Route path="/add-recipe" element={<AddRecipeForm />} />
         <Route path="/recipes/:id" element={<RecipeDetails />} />
+        <Route path="/favorites" element={<FavoritesList />} />
+        <Route path="/recommendations" element={<RecommendationsList />} />
       </Routes>
     </Router>
     </>
