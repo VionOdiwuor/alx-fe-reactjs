@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Profile from './components/Profile';
 import Blog from './components/Blog';
 import BlogPost from './components/BlogPost';
