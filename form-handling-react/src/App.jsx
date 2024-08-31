@@ -1,15 +1,20 @@
-import { useState } from 'react'
-import FormikForm from './components/formikForm';
-function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
+import FormikForm from './components/formikForm';
+import PostsComponent from './components/PostsComponent'; // Import the PostsComponent
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient();
+
+  function App() {
+    return (
+      <QueryClientProvider client={queryClient}>
       <div>
         <FormikForm />
+        <PostsComponent />
       </div>
-    </>
-  )
+      </QueryClientProvider>
+  );
 }
 
-export default App
+
+export default App;
