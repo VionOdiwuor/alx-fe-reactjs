@@ -2,11 +2,11 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 function BlogPost() {
-  const { Id } = useParams();
+  const { id } = useParams();
 
   return (
     <div>
-      <h2>Blog Post {Id}</h2>
+      <h2>Blog Post {id}</h2>
       {/* Fetch and display the blog post content using the postId */}
     </div>
   );
