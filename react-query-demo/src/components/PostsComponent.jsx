@@ -13,7 +13,10 @@ const PostsComponent = () => {
     queryKey: ['posts'],
     queryFn: fetchPosts,
     staleTime: 30000, // Cache data for 30 seconds
-  });
+    cacheTime: 600000, // Cache data for 10 minutes (600,000 milliseconds)
+    refetchOnWindowFocus: false, // Disable refetching on window focus
+    keepPreviousData: true, 
+});
 
   if (isLoading) {
     return <div>Loading...</div>;
