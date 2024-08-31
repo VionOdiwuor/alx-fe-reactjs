@@ -9,7 +9,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/profile/*" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
         <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:postId" element={<BlogPost />} />
+        <Route path="/blog/:Id" element={<BlogPost />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
