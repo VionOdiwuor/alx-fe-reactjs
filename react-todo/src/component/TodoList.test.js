@@ -1,7 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import TodoList from "../component/TodoList";
-import {  jest } from '@jest/globals';
-
+import '@testing-library/jest-dom';
 // Test to check if the counter renders correctly
 test('renders TodoList component with initial todos', () => {
     render(<TodoList />);
