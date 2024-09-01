@@ -1,4 +1,4 @@
-import TodoList from "./component/TodoList"
+import TodoList from "./components/TodoList"
 
 function App() {
   const [count, setCount] = useState(0)

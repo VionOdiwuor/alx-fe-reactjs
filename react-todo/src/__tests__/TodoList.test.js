@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import TodoList from "../component/TodoList";
+import TodoList from "../components/TodoList";
 import {  jest } from '@jest/globals';
 
 // Test to check if the counter renders correctly
