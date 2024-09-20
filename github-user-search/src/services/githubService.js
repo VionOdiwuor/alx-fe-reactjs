@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const fetchGitHubData = async () => {
+export const fetchUserData = async () => {
     const GITHUB_API_URL = `https://api.github.com/users/${username}`;
     try {
     const response = await axios.get(GITHUB_API_URL);
