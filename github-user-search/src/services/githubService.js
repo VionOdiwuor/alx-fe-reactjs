@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const fetchUserData = async () => {
-    const GITHUB_API_URL = `https://api.github.com/users/${username}`;
+    const GITHUB_API_URL = `https://api.github.com/search/users?q`;
     // Construct query string based on inputs
   let query = username ? `${username} in:login` : '';
   if (location) query += ` location:${location}`;
